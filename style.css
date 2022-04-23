@@ -1,0 +1,92 @@
+body {
+   min-height: 100vh; 
+   display: flex;
+   margin: 0;
+
+}
+.sidebar {
+    background-image: url("https://images.unsplash.com/photo-1650434910011-aa6be391e766?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=676&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 676px;
+    flex: 1 2 auto;
+    text-align: center;
+    color: white;  
+}
+.form-text {
+    background-color: black;
+    height: 100vh;
+    flex: 1 1 auto;
+    color: bisque;
+    font-size: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading {
+    font-size: 4rem;
+    font-weight: bold;
+}
+p {
+    text-align: left;
+    width: 75%;
+    align-self: left;
+    background-color: black;
+    padding: 20px;
+    font-size: 2rem;
+    margin: 0px;
+}
+form {
+    display: flex;
+    background-color: white;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+    color: black;
+    height: 50%;
+    align-content: center;
+    
+    row-gap: 80px;
+}
+input {
+    width: 50%;
+    height: 1rem;
+    position: relative;
+    
+    outline: none;
+    border: 4px solid burlywood;
+}
+button {
+    width: 15%;
+    background-color: cadetblue;
+    padding: 10px;
+}
+h5 {
+    background-color: black;
+    padding: 20px;
+    margin: 0px;
+}
+div:not(.sidebar, .form-text) {
+    width: 30%;
+   
+
+}
+label {
+    font-size: 1rem;
+    display: block;
+}
+
+input:focus {
+    border:4px solid violet;
+    box-shadow: 3px 5px 5px black;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 4px solid red;
+}
+
+#email:invalid:not(:focus):not(:placeholder-shown)+span::after{
+    content: "wrong";
+    font-size: 1rem;
+}
